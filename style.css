@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #eff0f4;
+}
+
+.container {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.form {
+  border-radius: 52% 48% 33% 67%/38% 45% 55% 62%;
+  box-shadow: inset 20px 20px 20px #0000000d, 25px 35px 20px #0000000d,
+    25px 30px 30px #0000000d, inset -20px -20px 25px #ffffffe6;
+  transition: all ease 0.5s;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 5%;
+    height: 0;
+    padding-bottom: 5%;
+    left: 25%;
+    top: 25%;
+    transform: skew(10deg, 0deg);
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: all ease 0.5s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 10%;
+    height: 0;
+    padding-bottom: 10%;
+    left: 15%;
+    top: 15%;
+    transform: skew(10deg, 0deg);
+    border-radius: 50%;
+    opacity: 0.9;
+    transition: all ease 0.5s;
+  }
+
+  &:hover {
+    border-radius: 50%;
+
+    &::before {
+      transform: skew(0deg, 0deg) translate(50%, 10%);
+    }
+
+    &::after {
+      transform: skew(0deg, 0deg) translate(50%, 10%);
+    }
+  }
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 80px 60px;
+
+  h1 {
+    color: #333;
+    margin: 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+input {
+  border: none;
+}
+
+input[type="text"] {
+  background-color: transparent;
+  outline: none;
+  color: #333;
+  font-weight: 550;
+
+  &::placeholder {
+    font-size: 13px;
+    color: #0000004d;
+  }
+}
+
+.input-box {
+  width: 225px;
+  border-radius: 25px;
+  box-shadow: 15px 15px 10px #0000000d, 15px 10px 15px #00000006;
+  overflow: hidden;
+
+  input {
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 100%;
+  }
+
+  input[type="text"] {
+    box-shadow: inset 2px 5px 10px #0000001a, inset -2px -5px 10px #fff;
+  }
+
+  input[type="submit"] {
+    background-color: #ff0f5b;
+    color: #fff;
+    box-shadow: inset 2px 5px 10px #0000001a, 15px 15px 10px #0000000d,
+      15px 10px 15px #00000006;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &.btn {
+    width: 120px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.satelite {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 550;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 14%;
+    height: 0;
+    padding-bottom: 12%;
+    background-color: #fff;
+    opacity: 0.5;
+    position: absolute;
+    top: 20%;
+    left: 24%;
+    border-radius: 50%;
+    transform: skew(-10deg, 0deg);
+    transition: all 0.35s ease;
+  }
+
+  &:hover {
+    border-radius: 50%;
+
+    &::before {
+      padding-bottom: 14%;
+      left: 20%;
+    }
+  }
+}
+
+.signup {
+  background-color: #01b4ff;
+  border-radius: 49% 51% 52% 48%/63% 59% 41% 37%;
+  box-shadow: inset 10px 10px 10px #01b4ff0d, 25px 35px 20px #01b4ff1a,
+    25px 30px 30px #01b4ff1a, inset -10px -10px 15px #ffffff80;
+  height: 80px;
+  width: 80px;
+  align-self: flex-end;
+}
+.forget {
+  width: 120px;
+  height: 120px;
+  background-color: #c61dff;
+  border-radius: 44% 56% 65% 35%/57% 58% 42% 43%;
+  box-shadow: inset 10px 10px 10px #be01fe0d, 25px 35px 20px #be01fe1a,
+    25px 30px 30px #be01fe1a, inset -10px -10px 15px #ffffff80;
+}
