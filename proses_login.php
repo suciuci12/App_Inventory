@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Query cek user
   $sql  = "SELECT * FROM users WHERE username='$username' AND password='$password' LIMIT 1";
   $result = mysqli_query($koneksi, $sql);  
-
+ 
   if (mysqli_num_rows($result) == 1) {
     // Login sukses
     $row = mysqli_fetch_assoc($result);
